@@ -1,4 +1,4 @@
-module github.com/jkawamoto/go-siastats
+module github.com/jkawamoto/go-siastats/pkg
 
 require (
     github.com/antihax/optional v0.0.0-20180406194304-ca021399b1a6
