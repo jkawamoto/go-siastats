@@ -15,7 +15,7 @@ import (
 	"encoding/json"
 	"os"
 
-	siastats "github.com/jkawamoto/go-siastats/pkg"
+	"github.com/jkawamoto/go-siastats/pkg/siastats"
 )
 
 type AllHostsCommand struct{}

@@ -18,7 +18,7 @@ import (
 
 	"github.com/jessevdk/go-flags"
 
-	siastats "github.com/jkawamoto/go-siastats/pkg"
+	"github.com/jkawamoto/go-siastats/pkg/siastats"
 )
 
 var client *siastats.APIClient
