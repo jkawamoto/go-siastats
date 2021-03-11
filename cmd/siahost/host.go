@@ -1,7 +1,7 @@
 /*
  * host.go
  *
- * Copyright (c) 2019 Junpei Kawamoto
+ * Copyright (c) 2019-2021 Junpei Kawamoto
  *
  * This software is released under the MIT License.
  *
@@ -22,7 +22,6 @@ type HostCommand struct {
 }
 
 func (c *HostCommand) Execute(args []string) error {
-
 	ctx := context.Background()
 	for _, v := range args {
 
@@ -31,7 +30,7 @@ func (c *HostCommand) Execute(args []string) error {
 			return fmt.Errorf("failed to convert given host ID %v: %v", v, err)
 		}
 
-		res, _, err := client.HostApi.Host(ctx, int32(id))
+		res, _, err := client.HostApi.Host(ctx, int32(id)).Execute()
 		if err != nil {
 			return fmt.Errorf("failed to get information of host %v: %v", id, err)
 		}
@@ -44,5 +43,4 @@ func (c *HostCommand) Execute(args []string) error {
 	}
 
 	return nil
-
 }

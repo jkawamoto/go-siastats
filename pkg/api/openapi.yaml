@@ -27,7 +27,7 @@ paths:
           type: string
         style: simple
       responses:
-        200:
+        "200":
           content:
             application/json:
               schema:
@@ -51,7 +51,7 @@ paths:
     get:
       operationId: status
       responses:
-        200:
+        "200":
           content:
             application/json:
               schema:
@@ -83,7 +83,7 @@ paths:
           type: integer
         style: simple
       responses:
-        200:
+        "200":
           content:
             application/json:
               schema:
@@ -110,7 +110,7 @@ paths:
               $ref: '#/components/schemas/AllHostsRequest'
         required: true
       responses:
-        200:
+        "200":
           content:
             application/json:
               schema:
@@ -177,18 +177,21 @@ components:
       type: object
     Benchmarks:
       example:
-        latencyScore: 1
+        scoreChange_1day: -0.18
         finalScore: 6
         errorDescription: errorDescription
-        benchFailureRate: 6
         errorType: errorType
         latency: 7
         downScore: 9
-        contractSuccess: true
+        scoreChange_7day: -0.54
         errorFull: errorFull
-        up: 4
+        scoreChange_7day_smooth: -0.41
         down: 9
         upScore: 5
+        latencyScore: 1
+        benchFailureRate: 6
+        contractSuccess: true
+        up: 4
       properties:
         finalScore:
           type: integer
@@ -215,6 +218,15 @@ components:
         errorDescription:
           type: string
         errorFull:
+          type: string
+        scoreChange_1day:
+          example: -0.18
+          type: string
+        scoreChange_7day:
+          example: -0.54
+          type: string
+        scoreChange_7day_smooth:
+          example: -0.41
           type: string
       type: object
     ComparisonMatrix:
@@ -500,18 +512,21 @@ components:
         rank: 6
         id: 0
         benchmarks:
-          latencyScore: 1
+          scoreChange_1day: -0.18
           finalScore: 6
           errorDescription: errorDescription
-          benchFailureRate: 6
           errorType: errorType
           latency: 7
           downScore: 9
-          contractSuccess: true
+          scoreChange_7day: -0.54
           errorFull: errorFull
-          up: 4
+          scoreChange_7day_smooth: -0.41
           down: 9
           upScore: 5
+          latencyScore: 1
+          benchFailureRate: 6
+          contractSuccess: true
+          up: 4
         lat: 5.962133916683182
         usedStorage: 7.061401241503109
         firstSeenBlock: 1
@@ -674,3 +689,4 @@ components:
           type: integer
         y:
           type: integer
+      type: object

@@ -1,7 +1,7 @@
 /*
  * status.go
  *
- * Copyright (c) 2019 Junpei Kawamoto
+ * Copyright (c) 2019-2021 Junpei Kawamoto
  *
  * This software is released under the MIT License.
  *
@@ -19,9 +19,8 @@ import (
 
 type StatusCommand struct{}
 
-func (s *StatusCommand) Execute(args []string) (err error) {
-
-	res, _, err := client.NavigatorApi.Status(context.Background())
+func (s *StatusCommand) Execute(_ []string) (err error) {
+	res, _, err := client.NavigatorApi.Status(context.Background()).Execute()
 	if err != nil {
 		return
 	} else if len(res) == 0 {
@@ -30,5 +29,4 @@ func (s *StatusCommand) Execute(args []string) (err error) {
 
 	err = json.NewEncoder(os.Stdout).Encode(res[0])
 	return
-
 }

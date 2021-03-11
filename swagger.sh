@@ -2,7 +2,7 @@
 #
 # swagger.sh
 #
-# Copyright (c) 2019 Junpei Kawamoto
+# Copyright (c) 2019-2021 Junpei Kawamoto
 #
 # This software is released under the MIT License.
 #

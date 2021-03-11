@@ -1,7 +1,7 @@
 /*
  * main.go
  *
- * Copyright (c) 2019 Junpei Kawamoto
+ * Copyright (c) 2019-2021 Junpei Kawamoto
  *
  * This software is released under the MIT License.
  *
@@ -28,7 +28,9 @@ var (
 
 func init() {
 	cfg := siastats.NewConfiguration()
-	cfg.BasePath = "https://siastats.info:3510/hosts-api"
+	//cfg.Host = "https://siastats.info:3510/hosts-api"
+	//cfg.Servers = [
+	//]
 	cfg.HTTPClient = &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
@@ -38,7 +40,6 @@ func init() {
 }
 
 func main() {
-
 	parser := flags.NewParser(nil, flags.Default)
 	_, err := parser.AddCommand(
 		"allhosts",
@@ -63,5 +64,4 @@ func main() {
 		}
 		os.Exit(1)
 	}
-
 }

@@ -1,7 +1,7 @@
 /*
  * hash.go
  *
- * Copyright (c) 2019 Junpei Kawamoto
+ * Copyright (c) 2019-2021 Junpei Kawamoto
  *
  * This software is released under the MIT License.
  *
@@ -20,10 +20,8 @@ import (
 type HashCommand struct{}
 
 func (c *HashCommand) Execute(args []string) error {
-
 	for _, hash := range args {
-
-		res, _, err := client.NavigatorApi.Hash(context.Background(), hash)
+		res, _, err := client.NavigatorApi.Hash(context.Background(), hash).Execute()
 		if err != nil {
 			return err
 		}
@@ -39,5 +37,4 @@ func (c *HashCommand) Execute(args []string) error {
 	}
 
 	return nil
-
 }

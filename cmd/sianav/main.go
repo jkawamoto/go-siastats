@@ -1,7 +1,7 @@
 /*
  * main.go
  *
- * Copyright (c) 2019 Junpei Kawamoto
+ * Copyright (c) 2019-2021 Junpei Kawamoto
  *
  * This software is released under the MIT License.
  *
@@ -17,6 +17,7 @@ import (
 	"os"
 
 	"github.com/jessevdk/go-flags"
+
 	siastats "github.com/jkawamoto/go-siastats/pkg"
 )
 
@@ -34,7 +35,6 @@ func init() {
 }
 
 func main() {
-
 	parser := flags.NewParser(nil, flags.Default)
 	_, err := parser.AddCommand(
 		"status",
@@ -59,5 +59,4 @@ func main() {
 		}
 		os.Exit(1)
 	}
-
 }
