@@ -16,9 +16,9 @@ Name | Type | Description | Notes
 **ErrorType** | Pointer to **string** |  | [optional] 
 **ErrorDescription** | Pointer to **string** |  | [optional] 
 **ErrorFull** | Pointer to **string** |  | [optional] 
-**ScoreChange1day** | Pointer to **string** |  | [optional] 
-**ScoreChange7day** | Pointer to **string** |  | [optional] 
-**ScoreChange7daySmooth** | Pointer to **string** |  | [optional] 
+**ScoreChange1day** | Pointer to [**OneOfstringfloat**](oneOf&lt;string,float&gt;.md) |  | [optional] 
+**ScoreChange7day** | Pointer to [**OneOfstringfloat**](oneOf&lt;string,float&gt;.md) |  | [optional] 
+**ScoreChange7daySmooth** | Pointer to [**OneOfstringfloat**](oneOf&lt;string,float&gt;.md) |  | [optional] 
 
 ## Methods
 
@@ -341,20 +341,20 @@ HasErrorFull returns a boolean if a field has been set.
 
 ### GetScoreChange1day
 
-`func (o *Benchmarks) GetScoreChange1day() string`
+`func (o *Benchmarks) GetScoreChange1day() OneOfstringfloat`
 
 GetScoreChange1day returns the ScoreChange1day field if non-nil, zero value otherwise.
 
 ### GetScoreChange1dayOk
 
-`func (o *Benchmarks) GetScoreChange1dayOk() (*string, bool)`
+`func (o *Benchmarks) GetScoreChange1dayOk() (*OneOfstringfloat, bool)`
 
 GetScoreChange1dayOk returns a tuple with the ScoreChange1day field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScoreChange1day
 
-`func (o *Benchmarks) SetScoreChange1day(v string)`
+`func (o *Benchmarks) SetScoreChange1day(v OneOfstringfloat)`
 
 SetScoreChange1day sets ScoreChange1day field to given value.
 
@@ -366,20 +366,20 @@ HasScoreChange1day returns a boolean if a field has been set.
 
 ### GetScoreChange7day
 
-`func (o *Benchmarks) GetScoreChange7day() string`
+`func (o *Benchmarks) GetScoreChange7day() OneOfstringfloat`
 
 GetScoreChange7day returns the ScoreChange7day field if non-nil, zero value otherwise.
 
 ### GetScoreChange7dayOk
 
-`func (o *Benchmarks) GetScoreChange7dayOk() (*string, bool)`
+`func (o *Benchmarks) GetScoreChange7dayOk() (*OneOfstringfloat, bool)`
 
 GetScoreChange7dayOk returns a tuple with the ScoreChange7day field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScoreChange7day
 
-`func (o *Benchmarks) SetScoreChange7day(v string)`
+`func (o *Benchmarks) SetScoreChange7day(v OneOfstringfloat)`
 
 SetScoreChange7day sets ScoreChange7day field to given value.
 
@@ -391,20 +391,20 @@ HasScoreChange7day returns a boolean if a field has been set.
 
 ### GetScoreChange7daySmooth
 
-`func (o *Benchmarks) GetScoreChange7daySmooth() string`
+`func (o *Benchmarks) GetScoreChange7daySmooth() OneOfstringfloat`
 
 GetScoreChange7daySmooth returns the ScoreChange7daySmooth field if non-nil, zero value otherwise.
 
 ### GetScoreChange7daySmoothOk
 
-`func (o *Benchmarks) GetScoreChange7daySmoothOk() (*string, bool)`
+`func (o *Benchmarks) GetScoreChange7daySmoothOk() (*OneOfstringfloat, bool)`
 
 GetScoreChange7daySmoothOk returns a tuple with the ScoreChange7daySmooth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScoreChange7daySmooth
 
-`func (o *Benchmarks) SetScoreChange7daySmooth(v string)`
+`func (o *Benchmarks) SetScoreChange7daySmooth(v OneOfstringfloat)`
 
 SetScoreChange7daySmooth sets ScoreChange7daySmooth field to given value.
 

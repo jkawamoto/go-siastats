@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Color** | Pointer to **string** |  | [optional] 
 **From** | Pointer to **int64** |  | [optional] 
 **To** | Pointer to **int64** |  | [optional] 
-**Label** | Pointer to [**PlotBandLabel**](PlotBand_label.md) |  | [optional] 
+**Label** | Pointer to [**PlotBandLabel**](PlotBandLabel.md) |  | [optional] 
 
 ## Methods
 
